@@ -13,6 +13,11 @@ plugins:
 markdown: kramdown
 highlighter: rouge
 
+# Kramdown configuration
+kramdown:
+  parse_block_html: true
+  syntax_highlighter: rouge
+
 # Include these directories
 include:
   - assets
