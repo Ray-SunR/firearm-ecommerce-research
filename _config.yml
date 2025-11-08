@@ -2,7 +2,7 @@ title: Firearm E-commerce Tech Stack Analysis
 description: Comprehensive analysis of e-commerce technology stacks for firearm retailers
 author: Tech Stack Research
 url: "" # Your GitHub Pages URL will be added here
-baseurl: "" # Leave empty if using custom domain, or use /repository-name
+baseurl: "/firearm-ecommerce-research" # Repository name for GitHub Pages
 
 # Plugins
 plugins:
@@ -13,9 +13,14 @@ plugins:
 markdown: kramdown
 highlighter: rouge
 
+# Include these directories
+include:
+  - assets
+
 # Exclude from processing
 exclude:
   - README.md
+  - SETUP.md
   - Gemfile
   - Gemfile.lock
   - node_modules
