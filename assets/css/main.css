@@ -144,14 +144,29 @@ code {
 
 /* Header */
 .site-header {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
     color: white;
     padding: var(--spacing-2xl) 0;
     box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.site-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
 }
 
 .header-content {
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .site-title {
@@ -159,13 +174,16 @@ code {
     margin-bottom: var(--spacing-md);
     color: white;
     border: none;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .site-subtitle {
     font-size: 1.25rem;
-    opacity: 0.95;
-    font-weight: 300;
+    opacity: 1;
+    font-weight: 400;
     margin-bottom: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    color: rgba(255, 255, 255, 0.95);
 }
 
 /* Navigation */
@@ -196,10 +214,17 @@ code {
     transition: all 0.2s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     background: var(--bg-tertiary);
     color: var(--primary);
     text-decoration: none;
+}
+
+.nav-links a.active {
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
 }
 
 /* Main Content */
@@ -361,16 +386,23 @@ tbody tr:last-child td {
     margin: var(--spacing-lg) 0;
 }
 
-.insight-item {
+h4.insight-item {
     background: var(--bg-secondary);
     padding: var(--spacing-md);
     border-radius: var(--radius-md);
     border-left: 4px solid var(--primary);
+    color: var(--primary);
+    margin-top: var(--spacing-lg);
 }
 
-.insight-item h4 {
-    color: var(--primary);
-    margin-top: 0;
+h4.insight-item ~ * {
+    margin-left: var(--spacing-md);
+    margin-right: var(--spacing-md);
+}
+
+h4.insight-item ~ *:last-child {
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
 }
 
 /* Recommendations */
@@ -509,3 +541,51 @@ hr {
     animation: fadeIn 0.5s ease-out;
 }
 
+/* Setup Guide Sections */
+.setup-section {
+    background: var(--bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-lg);
+    border-left: 4px solid var(--accent);
+    position: relative;
+}
+
+.setup-section::before {
+    content: '⚙️';
+    position: absolute;
+    top: var(--spacing-lg);
+    right: var(--spacing-lg);
+    font-size: 1.5rem;
+    opacity: 0.7;
+}
+
+/* Enhanced table styling for setup guide */
+.setup-section table {
+    margin-top: var(--spacing-md);
+    border: 1px solid var(--border);
+}
+
+.setup-section th {
+    background: var(--primary);
+    color: white;
+    font-size: 0.9rem;
+}
+
+.setup-section td:first-child {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Cost highlighting */
+.setup-section td:nth-child(3) {
+    font-weight: 600;
+    color: var(--success);
+}
+
+/* Budget table styling */
+table td:contains("Total") {
+    font-weight: 700;
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}

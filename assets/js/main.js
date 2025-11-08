@@ -22,14 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add IDs to sections for navigation
-    const sections = document.querySelectorAll('h2');
-    sections.forEach(section => {
-        const id = section.textContent.toLowerCase()
-            .replace(/[^a-z0-9]+/g, '-')
-            .replace(/^-|-$/g, '');
-        section.id = id;
-    });
+    // Note: IDs are already set via Jekyll's {: #id} syntax, no need to auto-generate
     
     // Highlight active navigation item on scroll
     const observerOptions = {
@@ -52,6 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
+    // Get sections with existing IDs for intersection observer
+    const sections = document.querySelectorAll('[id]');
     sections.forEach(section => {
         if (section.id) {
             observer.observe(section);
@@ -74,4 +69,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
