@@ -475,25 +475,52 @@ hr {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .site-header {
+        padding: var(--spacing-lg) 0;
+    }
+    
     .site-title {
         font-size: 2rem;
+        line-height: 1.1;
+        margin-bottom: var(--spacing-sm);
     }
     
     .site-subtitle {
         font-size: 1rem;
+        line-height: 1.4;
     }
     
     h1 {
-        font-size: 2rem;
-    }
-    
-    h2 {
         font-size: 1.75rem;
     }
     
+    h2 {
+        font-size: 1.5rem;
+        margin-top: var(--spacing-lg);
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+    }
+    
+    h4 {
+        font-size: 1.125rem;
+    }
+    
     .nav-links {
-        flex-direction: column;
+        flex-direction: row;
         gap: var(--spacing-xs);
+        flex-wrap: wrap;
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .nav-links a {
+        font-size: 0.875rem;
+        padding: var(--spacing-xs);
     }
     
     .comparison-grid,
@@ -501,11 +528,107 @@ hr {
         grid-template-columns: 1fr;
     }
     
+    /* Mobile table styling */
     table {
-        font-size: 0.875rem;
+        font-size: 0.8rem;
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
     }
     
     th, td {
+        padding: var(--spacing-xs);
+        min-width: 120px;
+    }
+    
+    /* Setup sections mobile optimization */
+    .setup-section {
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .setup-section::before {
+        top: var(--spacing-md);
+        right: var(--spacing-md);
+        font-size: 1.25rem;
+    }
+    
+    /* Mobile-friendly cards */
+    h3.site-card {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+        padding: var(--spacing-md);
+    }
+    
+    h3.site-card::before {
+        font-size: 2rem;
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    /* Better mobile spacing */
+    .site-main {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    /* Mobile warning boxes */
+    .warning-box {
+        padding: var(--spacing-sm);
+        margin: var(--spacing-md) 0;
+    }
+    
+    /* Mobile recommendations */
+    .recommendations-list li {
+        padding: var(--spacing-sm);
+        padding-left: var(--spacing-lg);
+    }
+    
+    .recommendations-list li::before {
+        left: -12px;
+        top: var(--spacing-sm);
+        width: 24px;
+        height: 24px;
+        font-size: 0.75rem;
+    }
+    
+    .recommendations-list li strong {
+        margin-left: var(--spacing-sm);
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 1.75rem;
+    }
+    
+    .site-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+    
+    .nav-links a {
+        text-align: center;
+        display: block;
+    }
+    
+    table {
+        font-size: 0.75rem;
+    }
+    
+    th, td {
+        padding: 0.5rem 0.25rem;
+        min-width: 100px;
+    }
+    
+    .setup-section {
         padding: var(--spacing-sm);
     }
 }
@@ -549,6 +672,54 @@ hr {
     margin-bottom: var(--spacing-lg);
     border-left: 4px solid var(--accent);
     position: relative;
+}
+
+/* Mobile table wrapper for horizontal scrolling */
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Touch-friendly elements */
+@media (hover: none) and (pointer: coarse) {
+    .nav-links a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .site-card {
+        padding: var(--spacing-lg);
+        min-height: 80px;
+    }
+    
+    /* Remove hover effects on touch devices */
+    tbody tr:hover {
+        background: transparent;
+    }
+    
+    .comparison-card:hover {
+        border-color: var(--border);
+        box-shadow: var(--shadow-sm);
+    }
+}
+
+/* Landscape mobile optimization */
+@media (max-width: 768px) and (orientation: landscape) {
+    .site-header {
+        padding: var(--spacing-md) 0;
+    }
+    
+    .site-title {
+        font-size: 1.75rem;
+    }
+    
+    .site-subtitle {
+        font-size: 0.95rem;
+    }
 }
 
 .setup-section::before {
