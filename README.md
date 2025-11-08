@@ -25,14 +25,31 @@ This repository contains a comprehensive analysis of three Canadian firearm e-co
 
 The full analysis is available as a GitHub Pages site. Once this repository is published and GitHub Pages is enabled, you can view it at:
 
+**For Project Site** (repository name in URL):
 `https://[your-username].github.io/firearm-ecommerce-research/`
+
+**For User/Organization Site** (if using custom domain or root):
+`https://[your-username].github.io/`
+
+## ⚙️ Configuration
+
+### Setting up baseurl
+
+1. **If using as a project site** (URL includes repository name):
+   - Edit `_config.yml`
+   - Set `baseurl: "/firearm-ecommerce-research"`
+
+2. **If using as a user/organization site** (root domain):
+   - Edit `_config.yml`
+   - Set `baseurl: ""`
 
 ## 🚀 Setup Instructions
 
 1. Clone this repository
-2. Enable GitHub Pages in repository settings (Settings → Pages)
-3. Select the main branch as the source
-4. The site will be automatically built using Jekyll
+2. Update `baseurl` in `_config.yml` based on your setup (see above)
+3. Enable GitHub Pages in repository settings (Settings → Pages)
+4. Select the main branch as the source
+5. The site will be automatically built using Jekyll
 
 ## 📝 Methodology
 
@@ -48,4 +65,3 @@ November 8, 2025
 ## 📄 License
 
 This analysis is provided for informational purposes. All data was collected through publicly available information and standard web inspection techniques.
-
