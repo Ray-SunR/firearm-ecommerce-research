@@ -11,9 +11,8 @@ This document provides a comprehensive analysis of three e-commerce websites' te
 ## Analyzed Sites
 {: #sites}
 
-<div class="site-card">
-
 ### 1. Gotenda.com
+{: .site-card}
 
 **Website**: [https://www.gotenda.com](https://www.gotenda.com)
 
@@ -69,11 +68,8 @@ This document provides a comprehensive analysis of three e-commerce websites' te
   - Mailchimp for WordPress
   - Google Site Verification
 
-</div>
-
-<div class="site-card">
-
 ### 2. Reliablegun.com
+{: .site-card}
 
 **Website**: [https://www.reliablegun.com](https://www.reliablegun.com)
 
@@ -123,11 +119,8 @@ This document provides a comprehensive analysis of three e-commerce websites' te
   - Content Security Policy (CSP) headers
   - Strict Transport Security (HSTS)
 
-</div>
-
-<div class="site-card">
-
 ### 3. Firearmsoutletcanada.com
+{: .site-card}
 
 **Website**: [https://firearmsoutletcanada.com](https://firearmsoutletcanada.com)
 
@@ -181,10 +174,6 @@ This document provides a comprehensive analysis of three e-commerce websites' te
   - InStockNotify (back-in-stock notifications)
   - BigCommerce Transit Insurance integration
 
-</div>
-
-</div>
-
 ## Summary Comparison
 {: #comparison}
 
@@ -201,14 +190,11 @@ This document provides a comprehensive analysis of three e-commerce websites' te
 | **Security** | Sucuri WAF | Cloudflare WAF | BigCommerce + Cloudflare |
 | **Complexity** | High (many plugins) | Medium | Low (managed platform) |
 
-</div>
-
 ## Key Insights and Best Practices
 {: #insights}
 
-<div class="insight-item">
-
 ### 1. Platform Selection
+{: .insight-item}
 
 - **WordPress/WooCommerce**: Best for businesses wanting full control and customization, but requires more maintenance. **Firearm-friendly platform.**
 - **nopCommerce**: Good for .NET environments, offers flexibility with enterprise features. **Firearm-friendly platform.**
@@ -219,68 +205,46 @@ This document provides a comprehensive analysis of three e-commerce websites' te
 Shopify does NOT allow firearm sales. For firearms e-commerce, consider WordPress/WooCommerce, BigCommerce, nopCommerce, or other firearm-compliant platforms.
 </div>
 
-</div>
-
-<div class="insight-item">
-
 ### 2. Hosting Strategy
+{: .insight-item}
 
 - All three sites use cloud hosting, indicating scalability is a priority
 - CDN usage is universal, showing importance of global performance
 - Security layers (WAF) are implemented across all sites
 
-</div>
-
-<div class="insight-item">
-
 ### 3. DNS Management
+{: .insight-item}
 
 - Two sites use GoDaddy DNS (simple setup)
 - One site uses Cloudflare DNS (integrated with CDN/WAF)
 
-</div>
-
-<div class="insight-item">
-
 ### 4. Payment Processing
+{: .insight-item}
 
 - All use Canadian payment processors (Bambora, Moneris)
 - Modern payment options (Sezzle BNPL) are being adopted
 
-</div>
-
-<div class="insight-item">
-
 ### 5. Performance Optimization
+{: .insight-item}
 
 - All sites implement CDN for static assets
 - Image optimization tools are used
 - Modern JavaScript frameworks for better UX
 
-</div>
-
-<div class="insight-item">
-
 ### 6. Marketing & Analytics
+{: .insight-item}
 
 - Google Analytics is standard across all sites
 - Email marketing (Klaviyo, Mailchimp) is common
 - Review systems (Yotpo) enhance trust
 
-</div>
-
-<div class="insight-item">
-
 ### 7. Security Best Practices
+{: .insight-item}
 
 - All sites use HTTPS/SSL
 - WAF (Web Application Firewall) protection
 - CSP headers where applicable
 - Regular security updates (especially important for WordPress)
-
-</div>
-
-</div>
 
 ## Recommendations for Building Your E-commerce Site
 {: #recommendations}

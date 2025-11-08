@@ -209,32 +209,34 @@ code {
 }
 
 /* Cards */
-.site-card {
+h3.site-card {
     background: var(--bg-primary);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     padding: var(--spacing-lg);
     margin-bottom: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
     box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
-}
-
-.site-card:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
-}
-
-.site-card h3 {
     color: var(--primary);
-    margin-top: 0;
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
 }
 
-.site-card h3::before {
+h3.site-card::before {
     content: '🌐';
     font-size: 1.5rem;
+}
+
+h3.site-card ~ * {
+    margin-left: var(--spacing-lg);
+    margin-right: var(--spacing-lg);
+}
+
+h3.site-card ~ *:last-child {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
 }
 
 /* Lists */
