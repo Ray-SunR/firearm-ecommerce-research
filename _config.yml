@@ -1,6 +1,10 @@
 title: Firearm E-commerce Tech Stack Analysis
 description: Comprehensive analysis of e-commerce technology stacks for firearm retailers
-theme: minima
+author: Tech Stack Research
+url: "" # Your GitHub Pages URL will be added here
+baseurl: "" # Leave empty if using custom domain, or use /repository-name
+
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
