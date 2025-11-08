@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ site.description }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="site-title">🔍 Firearm E-commerce Tech Stack Analysis</h1>
+                <p class="site-subtitle">Comprehensive analysis of Canadian firearm retailers' technology infrastructure</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="site-nav">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#sites">Analyzed Sites</a></li>
+                <li><a href="#comparison">Comparison</a></li>
+                <li><a href="#insights">Insights</a></li>
+                <li><a href="#recommendations">Recommendations</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="site-main">
+        <div class="container">
+            {{ content }}
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Analysis completed: November 8, 2025</p>
+            <p class="methodology">Methodology: Browser inspection, network analysis, DNS queries, server header analysis, and HTML source examination</p>
+        </div>
+    </footer>
+
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
+

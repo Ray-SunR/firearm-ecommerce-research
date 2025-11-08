@@ -3,13 +3,25 @@ layout: default
 title: Firearm E-commerce Tech Stack Analysis
 ---
 
-# E-commerce Website Tech Stack Analysis
+<div id="overview">
 
-This document provides a comprehensive analysis of three e-commerce websites' technology stacks, hosting solutions, frameworks, and DNS configurations.
+## Overview
 
-## 1. Gotenda.com (https://www.gotenda.com)
+This document provides a comprehensive analysis of three e-commerce websites' technology stacks, hosting solutions, frameworks, and DNS configurations. All three sites are successful Canadian firearm retailers, providing valuable insights into firearm-compliant e-commerce platforms.
 
-### Framework
+</div>
+
+<div id="sites">
+
+## Analyzed Sites
+
+<div class="site-card">
+
+### 1. Gotenda.com
+
+**Website**: [https://www.gotenda.com](https://www.gotenda.com)
+
+#### Framework
 - **Platform**: WordPress 6.7.1
 - **E-commerce Plugin**: WooCommerce 9.4.2
 - **Theme**: Custom child theme based on "estore-pro" parent theme
@@ -27,7 +39,7 @@ This document provides a comprehensive analysis of three e-commerce websites' te
   - WP Smushit (image optimization)
   - GTranslate (multi-language)
 
-### Tech Stack
+#### Tech Stack
 - **Frontend**: 
   - jQuery 3.7.1
   - React 18.3.1 (for WordPress Gutenberg blocks)
@@ -36,20 +48,20 @@ This document provides a comprehensive analysis of three e-commerce websites' te
 - **Backend**: PHP (WordPress/WooCommerce)
 - **Database**: MySQL (typical WordPress setup)
 
-### Hosting Solution
+#### Hosting Solution
 - **Provider**: Sucuri Cloudproxy
 - **Type**: Cloud-hosted (managed WordPress hosting with security/CDN)
 - **IP Address**: 192.124.249.17
 - **CDN**: Sucuri (acts as both CDN and Web Application Firewall)
 - **Server Headers**: `server: Sucuri/Cloudproxy`
 
-### DNS Solution
+#### DNS Solution
 - **DNS Provider**: GoDaddy
 - **Nameservers**: 
   - ns47.domaincontrol.com
   - ns48.domaincontrol.com
 
-### Additional Services
+#### Additional Services
 - **Payment Gateway**: Bambora/Beanstream (Canadian payment processor)
 - **Analytics**: 
   - Google Analytics (multiple tracking IDs: G-XS6PLEDWYF, G-4FWW0JS8PV, UA-192594559-1)
@@ -61,11 +73,15 @@ This document provides a comprehensive analysis of three e-commerce websites' te
   - Mailchimp for WordPress
   - Google Site Verification
 
----
+</div>
 
-## 2. Reliablegun.com (https://www.reliablegun.com)
+<div class="site-card">
 
-### Framework
+### 2. Reliablegun.com
+
+**Website**: [https://www.reliablegun.com](https://www.reliablegun.com)
+
+#### Framework
 - **Platform**: nopCommerce
 - **Theme**: Motion theme (customized)
 - **Version**: Confirmed via meta generator tag: "nopCommerce"
@@ -75,7 +91,7 @@ This document provides a comprehensive analysis of three e-commerce websites' te
   - Product Ribbons extension
   - Instant Search functionality
 
-### Tech Stack
+#### Tech Stack
 - **Frontend**: 
   - jQuery 1.10.2
   - Kendo UI (for autocomplete/search functionality)
@@ -83,7 +99,7 @@ This document provides a comprehensive analysis of three e-commerce websites' te
 - **Backend**: ASP.NET (nopCommerce is built on .NET)
 - **Database**: SQL Server (typical nopCommerce setup)
 
-### Hosting Solution
+#### Hosting Solution
 - **Provider**: Amazon Web Services (AWS)
 - **Type**: Cloud-hosted
 - **IP Addresses**: 
@@ -92,13 +108,13 @@ This document provides a comprehensive analysis of three e-commerce websites' te
 - **CDN**: Cloudflare
 - **Server Headers**: `server: cloudflare`
 
-### DNS Solution
+#### DNS Solution
 - **DNS Provider**: Cloudflare
 - **Nameservers**: 
   - laura.ns.cloudflare.com
   - quinton.ns.cloudflare.com
 
-### Additional Services
+#### Additional Services
 - **Payment Gateway**: Moneris (Canadian payment processor, detected in CSP headers)
 - **Analytics**: 
   - Google Analytics (G-N39JDTT0T3, UA-56247625-1)
@@ -111,17 +127,21 @@ This document provides a comprehensive analysis of three e-commerce websites' te
   - Content Security Policy (CSP) headers
   - Strict Transport Security (HSTS)
 
----
+</div>
 
-## 3. Firearmsoutletcanada.com (https://firearmsoutletcanada.com)
+<div class="site-card">
 
-### Framework
+### 3. Firearmsoutletcanada.com
+
+**Website**: [https://firearmsoutletcanada.com](https://firearmsoutletcanada.com)
+
+#### Framework
 - **Platform**: BigCommerce
 - **Theme**: Stencil-based custom theme
 - **Version**: Confirmed via meta tag: `platform: bigcommerce.stencil`
 - **Store Hash**: s-ezlzxhcsxg (visible in CDN URLs)
 
-### Tech Stack
+#### Tech Stack
 - **Frontend**: 
   - jQuery 3.6.0
   - BigCommerce Stencil framework
@@ -130,7 +150,7 @@ This document provides a comprehensive analysis of three e-commerce websites' te
 - **Backend**: BigCommerce SaaS platform (PHP/Node.js hybrid)
 - **Database**: Managed by BigCommerce
 
-### Hosting Solution
+#### Hosting Solution
 - **Provider**: BigCommerce (SaaS platform)
 - **Type**: Fully managed cloud-hosted e-commerce platform
 - **IP Address**: 192.200.160.17 (BigCommerce Inc.)
@@ -139,13 +159,13 @@ This document provides a comprehensive analysis of three e-commerce websites' te
   - Cloudflare (detected via cf-ray headers)
 - **Server Headers**: BigCommerce managed infrastructure
 
-### DNS Solution
+#### DNS Solution
 - **DNS Provider**: GoDaddy
 - **Nameservers**: 
   - ns19.domaincontrol.com
   - ns20.domaincontrol.com
 
-### Additional Services
+#### Additional Services
 - **Payment Gateway**: 
   - Sezzle (buy now, pay later)
   - Multiple payment options via BigCommerce integrations
@@ -165,7 +185,11 @@ This document provides a comprehensive analysis of three e-commerce websites' te
   - InStockNotify (back-in-stock notifications)
   - BigCommerce Transit Insurance integration
 
----
+</div>
+
+</div>
+
+<div id="comparison">
 
 ## Summary Comparison
 
@@ -182,76 +206,151 @@ This document provides a comprehensive analysis of three e-commerce websites' te
 | **Security** | Sucuri WAF | Cloudflare WAF | BigCommerce + Cloudflare |
 | **Complexity** | High (many plugins) | Medium | Low (managed platform) |
 
----
+</div>
+
+<div id="insights">
 
 ## Key Insights and Best Practices
 
-### 1. **Platform Selection**
+<div class="insight-item">
+
+### 1. Platform Selection
+
 - **WordPress/WooCommerce**: Best for businesses wanting full control and customization, but requires more maintenance. **Firearm-friendly platform.**
 - **nopCommerce**: Good for .NET environments, offers flexibility with enterprise features. **Firearm-friendly platform.**
 - **BigCommerce**: Ideal for businesses wanting a fully managed solution with less technical overhead. **Firearm-friendly platform.**
-- **⚠️ Important Note**: Shopify does NOT allow firearm sales. For firearms e-commerce, consider WordPress/WooCommerce, BigCommerce, nopCommerce, or other firearm-compliant platforms.
 
-### 2. **Hosting Strategy**
+<div class="warning-box">
+<strong>⚠️ Important Note</strong>
+Shopify does NOT allow firearm sales. For firearms e-commerce, consider WordPress/WooCommerce, BigCommerce, nopCommerce, or other firearm-compliant platforms.
+</div>
+
+</div>
+
+<div class="insight-item">
+
+### 2. Hosting Strategy
+
 - All three sites use cloud hosting, indicating scalability is a priority
 - CDN usage is universal, showing importance of global performance
 - Security layers (WAF) are implemented across all sites
 
-### 3. **DNS Management**
+</div>
+
+<div class="insight-item">
+
+### 3. DNS Management
+
 - Two sites use GoDaddy DNS (simple setup)
 - One site uses Cloudflare DNS (integrated with CDN/WAF)
 
-### 4. **Payment Processing**
+</div>
+
+<div class="insight-item">
+
+### 4. Payment Processing
+
 - All use Canadian payment processors (Bambora, Moneris)
 - Modern payment options (Sezzle BNPL) are being adopted
 
-### 5. **Performance Optimization**
+</div>
+
+<div class="insight-item">
+
+### 5. Performance Optimization
+
 - All sites implement CDN for static assets
 - Image optimization tools are used
 - Modern JavaScript frameworks for better UX
 
-### 6. **Marketing & Analytics**
+</div>
+
+<div class="insight-item">
+
+### 6. Marketing & Analytics
+
 - Google Analytics is standard across all sites
 - Email marketing (Klaviyo, Mailchimp) is common
 - Review systems (Yotpo) enhance trust
 
-### 7. **Security Best Practices**
+</div>
+
+<div class="insight-item">
+
+### 7. Security Best Practices
+
 - All sites use HTTPS/SSL
 - WAF (Web Application Firewall) protection
 - CSP headers where applicable
 - Regular security updates (especially important for WordPress)
 
----
+</div>
+
+</div>
+
+<div id="recommendations">
 
 ## Recommendations for Building Your E-commerce Site
 
-1. **Choose the Right Platform**: 
-   - **⚠️ CRITICAL**: Shopify does NOT allow firearm sales. Do not use Shopify for firearms e-commerce.
-   - For quick launch: BigCommerce (firearm-friendly, fully managed)
-   - For maximum control: WordPress/WooCommerce or nopCommerce (both firearm-friendly)
-   - Consider your team's technical expertise
-   - All three analyzed sites use firearm-compliant platforms (WordPress/WooCommerce, nopCommerce, BigCommerce)
+<ol class="recommendations-list">
 
-2. **Implement CDN**: Essential for global performance and user experience
+<li>
+<strong>1. Choose the Right Platform</strong>
+<div class="warning-box">
+<strong>⚠️ CRITICAL</strong>
+Shopify does NOT allow firearm sales. Do not use Shopify for firearms e-commerce.
+</div>
+- For quick launch: BigCommerce (firearm-friendly, fully managed)
+- For maximum control: WordPress/WooCommerce or nopCommerce (both firearm-friendly)
+- Consider your team's technical expertise
+- All three analyzed sites use firearm-compliant platforms (WordPress/WooCommerce, nopCommerce, BigCommerce)
+</li>
 
-3. **Use Managed Security**: WAF and DDoS protection are critical for e-commerce
+<li>
+<strong>2. Implement CDN</strong>
+Essential for global performance and user experience
+</li>
 
-4. **Optimize for Mobile**: All three sites are mobile-responsive
+<li>
+<strong>3. Use Managed Security</strong>
+WAF and DDoS protection are critical for e-commerce
+</li>
 
-5. **Integrate Analytics**: Track user behavior and conversion metrics
+<li>
+<strong>4. Optimize for Mobile</strong>
+All three sites are mobile-responsive
+</li>
 
-6. **Implement Reviews**: Build trust with customer reviews
+<li>
+<strong>5. Integrate Analytics</strong>
+Track user behavior and conversion metrics
+</li>
 
-7. **Payment Options**: Offer multiple payment methods including BNPL options
+<li>
+<strong>6. Implement Reviews</strong>
+Build trust with customer reviews
+</li>
 
-8. **Email Marketing**: Build customer relationships through email campaigns
+<li>
+<strong>7. Payment Options</strong>
+Offer multiple payment methods including BNPL options
+</li>
 
-9. **Search Functionality**: Invest in good site search (like Klevu) for better UX
+<li>
+<strong>8. Email Marketing</strong>
+Build customer relationships through email campaigns
+</li>
 
-10. **Regular Updates**: Keep platform and plugins/extensions updated for security
+<li>
+<strong>9. Search Functionality</strong>
+Invest in good site search (like Klevu) for better UX
+</li>
 
----
+<li>
+<strong>10. Regular Updates</strong>
+Keep platform and plugins/extensions updated for security
+</li>
 
-*Analysis completed: November 8, 2025*  
-*Methodology: Browser inspection, network analysis, DNS queries, server header analysis, and HTML source examination*
+</ol>
 
+</div>
