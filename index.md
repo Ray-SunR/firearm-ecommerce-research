@@ -3,17 +3,13 @@ layout: default
 title: Firearm E-commerce Tech Stack Analysis
 ---
 
-<div id="overview">
-
 ## Overview
+{: #overview}
 
 This document provides a comprehensive analysis of three e-commerce websites' technology stacks, hosting solutions, frameworks, and DNS configurations. All three sites are successful Canadian firearm retailers, providing valuable insights into firearm-compliant e-commerce platforms.
 
-</div>
-
-<div id="sites">
-
 ## Analyzed Sites
+{: #sites}
 
 <div class="site-card">
 
@@ -189,9 +185,8 @@ This document provides a comprehensive analysis of three e-commerce websites' te
 
 </div>
 
-<div id="comparison">
-
 ## Summary Comparison
+{: #comparison}
 
 | Aspect | Gotenda.com | Reliablegun.com | Firearmsoutletcanada.com |
 |--------|-------------|-----------------|--------------------------|
@@ -208,9 +203,8 @@ This document provides a comprehensive analysis of three e-commerce websites' te
 
 </div>
 
-<div id="insights">
-
 ## Key Insights and Best Practices
+{: #insights}
 
 <div class="insight-item">
 
@@ -288,9 +282,8 @@ Shopify does NOT allow firearm sales. For firearms e-commerce, consider WordPres
 
 </div>
 
-<div id="recommendations">
-
 ## Recommendations for Building Your E-commerce Site
+{: #recommendations}
 
 <ol class="recommendations-list">
 
