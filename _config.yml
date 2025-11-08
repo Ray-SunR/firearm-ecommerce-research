@@ -1,0 +1,19 @@
+title: Firearm E-commerce Tech Stack Analysis
+description: Comprehensive analysis of e-commerce technology stacks for firearm retailers
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
